@@ -36,7 +36,9 @@ coverage:
 .PHONY: lint
 lint: $(TOOLS_DIR)/golangci-lint
 	@echo Linting Go files...
-	@$(TOOLS_DIR)/golangci-lint run
+	export \
+		GOFLAGS="-buildvcs=false" && \
+	$(TOOLS_DIR)/golangci-lint run
 
 .PHONY: image
 image:
