@@ -1,4 +1,4 @@
-IMAGE=ghcr.io/metal-toolbox/audito-maldito
+IMAGE=ghcr.io/oliver-equinix/audito-maldito
 TAG=latest
 
 .PHONY: image
