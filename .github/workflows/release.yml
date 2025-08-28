@@ -85,4 +85,9 @@ jobs:
         env:
           DIGEST: ${{ steps.am-build-push.outputs.digest }}
           TAGS: ${{ steps.am-metadata.outputs.tags }}
-        run: cosign sign -y -r "${TAGS}@${DIGEST}"
+        run: |
+          images=""
+          for tag in ${TAGS}; do
+            images+="${tag}@${DIGEST} "
+          done
+          cosign sign -y -r ${images}
