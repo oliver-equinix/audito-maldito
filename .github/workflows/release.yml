@@ -6,7 +6,7 @@ on:
     tags:
       - v**
 env:
-  REGISTRY: ghcr.io/metal-toolbox
+  REGISTRY: ghcr.io/oliver-equinix
   APP_IMAGE_NAME: audito-maldito/audito-maldito
 
 jobs:

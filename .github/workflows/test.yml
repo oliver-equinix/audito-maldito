@@ -52,12 +52,12 @@ jobs:
           file: ./Dockerfile
           push: false
           load: true
-          tags: ghcr.io/metal-toolbox/audito-maldito:latest
+          tags: ghcr.io/oliver-equinix/audito-maldito:latest
 
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: ghcr.io/metal-toolbox/audito-maldito:latest
+          image-ref: ghcr.io/oliver-equinix/audito-maldito:latest
           security-checks: 'vuln,config,secret'
           ignore-unfixed: true
           severity: 'HIGH,CRITICAL'

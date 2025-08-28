@@ -7,7 +7,7 @@ INSTANCE_USER?=core
 LIVE_INSTANCE_BOOT_ID=
 TEST_LIVE_INSTANCE_DIR=live-instance-test
 
-IMAGE=ghcr.io/metal-toolbox/audito-maldito
+IMAGE=ghcr.io/oliver-equinix/audito-maldito
 TAG=latest
 
 .PHONY: all
