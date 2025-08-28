@@ -91,3 +91,14 @@ jobs:
             images+="${tag}@${DIGEST} "
           done
           cosign sign -y -r ${images}
+
+      - name: Sign rsyslog container image
+        env:
+          DIGEST: ${{ steps.rsyslog-build-push.outputs.digest }}
+          TAGS: ${{ steps.rsyslog-metadata.outputs.tags }}
+        run: |
+          images=""
+          for tag in ${TAGS}; do
+            images+="${tag}@${DIGEST} "
+          done
+          cosign sign -y -r ${images}
